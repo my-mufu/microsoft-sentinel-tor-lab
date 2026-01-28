@@ -21,7 +21,7 @@ This lab demonstrates how I showed hands on experience with:
 - Generating, triaging, and closing a **High-severity incident** end to end  
 - Documenting findings in a **clear, analyst-ready incident report**  
 
-Mapped to **MITRE ATT&CK** for threat context and reporting alignment:
+Aligned with **MITRE ATT&CK** techniques for threat context and analyst reporting:
 
 - [T1090.003: Proxy – Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003/)  
 - [T1530: Data from Cloud Storage](https://attack.mitre.org/techniques/T1530)
