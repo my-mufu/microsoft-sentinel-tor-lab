@@ -38,7 +38,7 @@ Mapped to **MITRE ATT&CK** for threat context and reporting alignment:
 
 ### 2. High-Severity Incident Detection
 
-![Sentinel Incident](screenshots/sentinel-incident.png)
+![Sentinel Incident](assets/incident.png)
 
 *Incident showing a suspicious sign-in from a Tor exit node, correlated to a specific user account.*
 
