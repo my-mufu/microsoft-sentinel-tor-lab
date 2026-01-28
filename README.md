@@ -44,7 +44,7 @@ Mapped to **MITRE ATT&CK** for threat context and reporting alignment:
 
 ### 3. Incident Report (PDF)
 
-📄 [View Full Incident Report (PDF)](screenshots/incident-report.pdf)
+📄 [View Full Incident Report (PDF)](assets/incident-report.pdf)
 
 *Exported directly from Microsoft Sentinel. Includes alert metadata, investigation steps, and evidence timeline.*
 
