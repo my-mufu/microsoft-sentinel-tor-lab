@@ -32,7 +32,7 @@ Mapped to **MITRE ATT&CK** for threat context and reporting alignment:
 
 ### 1. Analytics Rule Configuration
 
-![Sentinel Analytics Rule](screenshots/sentinel-rule.png)
+![Sentinel Analytics Rule](assets/sentinel-rule.mp4)
 
 *Custom KQL analytics rule using a known Tor exit IP, with explicit entity mapping for correlation.*
 
