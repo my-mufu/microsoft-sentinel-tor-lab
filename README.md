@@ -4,7 +4,7 @@
 
 This project showcases a **practical SOC analyst workflow** using **Microsoft Sentinel** to detect and investigate suspicious sign-in activity originating from known Tor exit nodes. The lab focuses on **detection engineering, alert fidelity, and incident handling**, all executed in a controlled Azure environment using verified threat intelligence.
 
-Rather than relying on noisy or unsafe traffic generation, I validated the detection logic using **synthetic telemetry modeled on real-world indicators**—a common approach in production SOCs when live attacker simulation isn’t feasible.
+Rather than relying on noisy or unsafe traffic generation, the detection logic was validated using **synthetic telemetry modeled on real-world indicators**—a common approach in production SOCs when live attacker simulation isn’t feasible.
 
 > 💡 **Scope clarification**  
 > No live Tor traffic, browsers, or third-party tools were used. All events were simulated, but the indicators themselves were sourced from the official [Tor Project public exit node list](https://check.torproject.org/torbulkexitlist).
@@ -17,7 +17,7 @@ This lab demonstrates hands-on experience with:
 
 - Deploying **Microsoft Sentinel** via ARM templates  
 - Designing a **custom analytics rule** to detect Tor-based access attempts  
-- Applying **accurate entity mapping** (`Account` and `IP`) to enable investigation and correlation  
+- Applying accurate **entity mapping** (`Account` and `IP`) to enable investigation and correlation  
 - Generating, triaging, and closing a **High-severity incident** end to end  
 - Documenting findings in a **clear, analyst-ready incident report**  
 
@@ -48,6 +48,8 @@ Mapped to **MITRE ATT&CK** for threat context and reporting alignment:
 
 *Exported directly from Microsoft Sentinel. Includes alert metadata, investigation steps, and evidence timeline.*
 
+> **Note:** PDF and video artifacts may not render directly in GitHub’s preview due to file size limitations, but are included in the repository.
+
 ---
 
 ## 🧪 Analyst Methodology
@@ -56,11 +58,11 @@ Mapped to **MITRE ATT&CK** for threat context and reporting alignment:
 
 In real SOC environments, analysts often need to validate detections without introducing real attacker traffic—especially in cloud-only or license-limited environments. This lab mirrors that reality.
 
-- **Threat Indicator**: `185.220.101.10`  
+- **Threat Indicator:** `185.220.101.10`  
   - Sourced from the official [Tor Project bulk exit list](https://check.torproject.org/torbulkexitlist)  
   - Verified as an active Tor exit node at the time of testing  
-- **Simulation Technique**: Static event injection using KQL `datatable`  
-- **Risk Profile**: Zero network impact; no authentication attempts or external connections  
+- **Simulation Technique:** Static event injection using KQL `datatable`  
+- **Risk Profile:** Zero network impact; no authentication attempts or external connections  
 
 This approach reflects how SOC teams safely test analytics rules before deploying them to production.
 
@@ -74,3 +76,4 @@ datatable(TimeGenerated: datetime, UserPrincipalName: string, IPAddress: string)
     datetime(2026-01-04T13:15:00Z), "attacker@sentinel-lab.onmicrosoft.com", "185.220.101.10"
 ]
 | extend FullName = UserPrincipalName, Address = IPAddress
+
