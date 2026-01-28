@@ -1,17 +1,17 @@
 > **Hands-on Microsoft Sentinel SOC lab featuring KQL-based detections, Tor exit node threat intelligence, MITRE ATT&CK mapping, and full incident lifecycle handling in Azure.**
 
-# 🔍 Microsoft Sentinel SOC Lab: Simulated Tor-Based Threat Detection
+# Microsoft Sentinel SOC Lab: Simulated Tor-Based Threat Detection
 
 This project showcases a **practical SOC analyst workflow** using **Microsoft Sentinel** to detect and investigate suspicious sign-in activity originating from known Tor exit nodes. The lab focuses on **detection engineering, alert fidelity, and incident handling**, all executed in a controlled Azure environment using verified threat intelligence.
 
 Rather than relying on noisy or unsafe traffic generation, the detection logic was validated using **synthetic telemetry modeled on real-world indicators**—a common approach in production SOCs when live attacker simulation isn’t feasible.
 
-> 💡 **Scope clarification**  
+> **Scope clarification**  
 > No live Tor traffic, browsers, or third-party tools were used. All events were simulated, but the indicators themselves were sourced from the official [Tor Project public exit node list](https://check.torproject.org/torbulkexitlist).
 
 ---
 
-## 🎯 SOC-Relevant Outcomes
+## SOC-Relevant Outcomes
 
 This lab demonstrates hands-on experience with:
 
@@ -52,7 +52,7 @@ Mapped to **MITRE ATT&CK** for threat context and reporting alignment:
 
 ---
 
-## 🧪 Analyst Methodology
+## Analyst Methodology
 
 ### Threat Simulation Approach
 
@@ -68,7 +68,7 @@ This approach reflects how SOC teams safely test analytics rules before deployin
 
 ---
 
-## 🔍 Detection Logic (KQL)
+## Detection Logic (KQL)
 
 ```kql
 datatable(TimeGenerated: datetime, UserPrincipalName: string, IPAddress: string)
