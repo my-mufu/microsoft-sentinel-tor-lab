@@ -28,7 +28,7 @@ Mapped to **MITRE ATT&CK** for threat context and reporting alignment:
 
 ---
 
-## 🖼️ Evidence & Artifacts
+## Evidence & Artifacts
 
 ### 1. Analytics Rule Configuration
 
