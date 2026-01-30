@@ -77,10 +77,3 @@ datatable(TimeGenerated: datetime, UserPrincipalName: string, IPAddress: string)
 ]
 | extend FullName = UserPrincipalName, Address = IPAddress
 
-The rule simulates a sign-in event from a known anonymization network and validates:
-
-IP-based threat detection
-
-Entity extraction accuracy
-
-Incident creation and severity handling in Sentinel
